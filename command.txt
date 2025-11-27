@@ -1,0 +1,9 @@
+python generate_demo.py --query "What's your view on Apple" --symbol AAPL
+
+python -m venv venv
+
+.\venv\Scripts\activate
+
+pip freeze > requirements.txt
+
+python -m pip install -r requirements.txt
