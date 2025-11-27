@@ -205,23 +205,7 @@ def get_dividends(symbol: str) -> Dict[str, Any]:
         return {"symbol": symbol, "error": traceback.format_exc()}
 
 
-def get_company_news(symbol: str, count: int = 5) -> Dict[str, Any]:
-    try:
-        t = _safe_ticker(symbol)
-        # yfinance has get_news()
-        news = []
-        if hasattr(t, 'get_news'):
-            raw = t.get_news() or []
-            for item in raw[:count]:
-                news.append({
-                    "title": item.get('title'),
-                    "link": item.get('link'),
-                    "publisher": item.get('publisher'),
-                    "providerPublishTime": item.get('providerPublishTime'),
-                })
-        return {"symbol": symbol, "news": news}
-    except Exception:
-        return {"symbol": symbol, "error": traceback.format_exc()}
+
 
 
 def get_analyst_recommendations(symbol: str) -> Dict[str, Any]:

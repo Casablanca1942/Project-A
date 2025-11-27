@@ -7,7 +7,6 @@ from .yf_tools import (
 	get_RSI,
 	get_bollinger_bands,
 	get_dividends,
-	get_company_news,
 	get_analyst_recommendations,
 )
 
@@ -20,6 +19,5 @@ __all__ = [
 	"get_RSI",
 	"get_bollinger_bands",
 	"get_dividends",
-	"get_company_news",
 	"get_analyst_recommendations",
 ]
